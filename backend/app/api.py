@@ -16,6 +16,19 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+
+#dummy data
+todos = [
+    {
+        "id":"1",
+        "item":"Read a book"
+    },
+    {
+        "id":"2",
+        "item":"Cycle around town"
+    }
+]
+
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
     return {"message": "Welcome to your todo list."}
