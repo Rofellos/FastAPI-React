@@ -32,3 +32,7 @@ todos = [
 @app.get("/", tags=["root"])
 async def read_root() -> dict:
     return {"message": "Welcome to your todo list."}
+
+@app.get("/todo", tags=["todos"])
+async def get_tudos() -> dict:
+    return { "data": togos }
